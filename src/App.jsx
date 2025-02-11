@@ -119,3 +119,14 @@ const loadTrendingMovies = async () => {
 };
 
 export default App
+
+
+/**
+ * 
+ * - Manages state for search term, error messages, movie list, loading state, debounced search term, and trending movies.
+ * - Uses the `useDebounce` hook to debounce the search term input.
+ * - Fetches movies from the API based on the search query or fetches popular movies if no query is provided.
+ * - Updates the movie list and handles loading and error states.
+ * - Loads trending movies from the backend and updates the trending movies state.
+ * - Uses `useEffect` to fetch movies whenever the debounced search term changes and to load trending movies on component mount.
+ */

@@ -47,3 +47,17 @@ export const getTrendingMovies = async () => {
         console.error(error);
     }
 }
+
+
+/**
+ * This module interacts with the Appwrite backend to manage movie search data.
+ * 
+ * - `updateSearchCount`: Updates the search count for a given search term in the Appwrite database.
+ *   - If the search term already exists, increments the count.
+ *   - If the search term does not exist, creates a new document with the search term and count set to 1.
+ *   - Also stores the movie ID and poster URL.
+ * 
+ * - `getTrendingMovies`: Retrieves the top 5 trending movies from the Appwrite database.
+ *   - Trending movies are determined by the highest search count.
+ *   - Returns an array of trending movie documents.
+ */
